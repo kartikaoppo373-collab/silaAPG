@@ -8,12 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-    <!-- HEADER & NAVIGASI -->
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
@@ -38,92 +37,38 @@
             <div class="container">
                 <h1>Riwayat Pengajuan</h1>
                 <p class="section-desc">Daftar semua pengajuan layanan akademik yang telah Anda buat.</p>
-                <!-- <p><em>Tabel riwayat akan tersedia pada tahap berikutnya.</em></p> -->
 
-                <table class="data-table">
-                    <caption>Data Pengajuan Akademik</caption>
-                    <!-- nama, nim, layanan, tgl, status -->
-                     <thead>
-                    <tr>
-                        <th>NO</th>
-                        <th>NIM</th>
-                        <th>Nama</th>
-                        <th>Layanan</th>
-                        <th>Tanggal</th>
-                        <th>Status</th>
-                    </tr>
-                     </thead>
+                <div class="toolbar">
+                    <span id="dataCount">0 pengajuan</span>
+                    <button id="btnHapusSemua" class="btn btn-outline" style="display: none;">🗑 Hapus Semua</button>
+                </div>
 
-                     <!-- Body -->
-                      <tbody>
-                        <!-- Tampil Data -->
-                         <!-- baris 1 -->
-                         <tr>
-                            <td>1</td>
-                            <td>241121861</td>
-                            <td>Tika</td>
-                            <td>SKA</td>
-                            <td>1 Mei 2026</td>
-                            <td>Diproses</td>
-                         </tr>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Layanan</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
 
-                         <!-- Tampil Data -->
-                         <!-- baris 2 -->
-                         <tr>
-                            <td>2</td>
-                            <td>241121861</td>
-                            <td>Gita</td>
-                            <td>SKA</td>
-                            <td>1 Mei 2026</td>
-                            <td>Diproses</td>
-                         </tr>
-
-                         <!-- Tampil Data -->
-                         <!-- baris 3 -->
-                         <tr>
-                            <td>3</td>
-                            <td>241121861</td>
-                            <td>Mariana</td>
-                            <td>SKA</td>
-                            <td>1 Mei 2026</td>
-                            <td>Diproses</td>
-                         </tr>
-
-                         <!-- Tampil Data -->
-                         <!-- baris 4 -->
-                         <tr>
-                            <td>4</td>
-                            <td>241121861</td>
-                            <td>Piani</td>
-                            <td>SKA</td>
-                            <td>1 Mei 2026</td>
-                            <td>Diproses</td>
-                         </tr>
-
-                         <!-- Tampil Data -->
-                         <!-- baris 5 -->
-                         <tr>
-                            <td>5</td>
-                            <td>241121861</td>
-                            <td>Gabriel</td>
-                            <td>SKA</td>
-                            <td>1 Mei 2026</td>
-                            <td>Diproses</td>
-                         </tr>
-
-
-
-                        
-
-                         
-                      </tbody>
-                    
-                </table>
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <p>🗂️ Belum ada pengajuan.</p>
+                    <a href="layanan.html" class="btn btn-primary">➕ Ajukan Layanan</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-inner">
             <div>
@@ -145,7 +90,9 @@
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
